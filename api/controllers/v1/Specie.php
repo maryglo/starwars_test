@@ -9,7 +9,7 @@ use Starwars_Test\Objects\Species as SpecieObject;
 class Specie extends Route {
   private $collection = 'species';
 
-  public function getPeople() {
+  public function getSpecies() {
     $db = DbManager::getInstance();
     $conn = $db->getConnection();
     $api = $this->api;

@@ -9,7 +9,7 @@ use Starwars_Test\Objects\Planet as PlanetObject;
 class Planet extends Route {
   private $collection = 'planets';
 
-  public function getPeople() {
+  public function getPlanets() {
     $db = DbManager::getInstance();
     $conn = $db->getConnection();
     $api = $this->api;
