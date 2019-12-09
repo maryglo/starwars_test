@@ -4,7 +4,7 @@ namespace Starwars_Test\v1;
 use Starwars_Test\Database\DbManager;
 use Starwars_Test\Route;
 use Starwars_Test\Util\ArrayUtils;
-use Starwars_Test\Objects\Film as FilmObject;
+use Starwars_Test\Objects\People as PeopleObject;
 
 class People extends Route {
   private $collection = 'people';
@@ -19,13 +19,13 @@ class People extends Route {
 
       return $api->response([
         'success' => true,
-        'films' => json_encode(iterator_to_array($people))
+        'people' => json_encode(iterator_to_array($people))
       ]);
 
     } catch( \MongoDB\Driver\Exception\AuthenticationException $e){
       return $api->response([
         'success' => false,
-        'films' => array(),
+        'people' => array(),
         'message' => $e->getMessage()
       ]);
     }
