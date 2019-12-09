@@ -1,12 +1,6 @@
 {
-    "name": "starwars_test",
-    "description": "Starwars Test",
-    "type": "project",
-    "license": "GPL",
-    "minimum-stability": "dev",
     "require": {
-    },
-    "autoload": {
-        "psr-4": {"Starwars_Test\\": "./src"}
+        "mongodb/mongodb": "~1.5",
+        "slim/slim": "~2.0"
     }
 }
