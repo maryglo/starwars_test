@@ -9,7 +9,7 @@ use Starwars_Test\Objects\Starship as StarshipObject;
 class Starship extends Route {
   private $collection = 'starships';
 
-  public function getStarship() {
+  public function getStarships() {
     $db = DbManager::getInstance();
     $conn = $db->getConnection();
     $api = $this->api;
