@@ -52,7 +52,18 @@ $api->group('/api', function () use ($api) {
     $api->group('/v1', function () use ($api) {
         /** Get all Films*/
         $api->get('/films?', '\Starwars_Test\v1\Film:getFilms')->name('get_films');
-
+        //all people
+        $api->get('/people?', '\Starwars_Test\v1\People:getPeople')->name('get_people');
+        //all planets
+        $api->get('/planets?', '\Starwars_Test\v1\Planet:getPlanets')->name('get_planets');
+        //all species
+        $api->get('/species?', '\Starwars_Test\v1\Specie:getSpecies')->name('get_species');
+        //all starships
+        $api->get('/starships?', '\Starwars_Test\v1\Starship:getStarships')->name('get_starships');
+        //all transports
+        $api->get('/transports?', '\Starwars_Test\v1\Transport:getTransports')->name('get_transports');
+        //all vehicles
+        $api->get('/vehicles?', '\Starwars_Test\v1\Vehicle:getVehicles')->name('get_vehicles');
     });
 });
 
